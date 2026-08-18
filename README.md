@@ -48,7 +48,8 @@
 
 <div align="center">
 
-### Permissions
+<img src="https://github-readme-stats.vercel.app/api?username=Refeain&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6&text_color=C9D1D9" height="165" alt="Refeain's GitHub stats" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Refeain&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=C9D1D9" height="165" alt="Top Languages" />
 
 </div>
 
