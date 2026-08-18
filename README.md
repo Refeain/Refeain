@@ -51,15 +51,10 @@
 
 <div align="center">
 
-<a href="https://github.com/Refeain">
-  <img src="https://img.shields.io/github/stars/Refeain?style=for-the-badge&logo=github&logoColor=white&color=3B82F6&labelColor=1F2937" alt="GitHub Stars" />
-</a>
-<a href="https://github.com/Refeain?tab=followers">
-  <img src="https://img.shields.io/github/followers/Refeain?style=for-the-badge&logo=github&logoColor=white&color=3B82F6&labelColor=1F2937" alt="GitHub Followers" />
-</a>
-<a href="https://github.com/Refeain?tab=repositories">
-  <img src="https://img.shields.io/badge/Dev%20Since-2024-3B82F6?style=for-the-badge&logo=calendar&logoColor=white&labelColor=1F2937" alt="Dev Since" />
-</a>
+<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/stats-card.svg" height="200" alt="GitHub Stats" />
+<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/langs-card.svg" height="200" alt="Top Languages" />
+
+<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/streak-card.svg" height="200" alt="GitHub Streak" />
 
 </div>
 
