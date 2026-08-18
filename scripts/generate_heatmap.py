@@ -2,8 +2,17 @@
 """Generate a GitHub-style contribution heatmap SVG for the profile README.
 
 Pulls the last 365 days of public contributions via the GitHub GraphQL API
-and renders a static SVG (no third-party image host required). Designed to be
-run by a GitHub Action, but works locally too:
+and renders a self-contained SVG (no third-party image host required).
+
+Visual style:
+  * rounded cells, weekday + month axes, Less/More legend
+  * a left-to-right "pop-in" load animation (plays every time the SVG is
+    rendered, since GitHub embeds it as an <img> and only runs internal CSS
+    animations — hover tooltips are disabled in <img> context, so we rely on
+    the animation for the "dynamic" feel)
+  * <title> tooltips still help when the SVG is opened directly
+
+Run by a GitHub Action, or locally:
 
     GH_TOKEN=<token> python scripts/generate_heatmap.py
 """
@@ -42,7 +51,8 @@ def main() -> None:
       user(login: $user) {
         contributionsCollection(from: $from, to: $to) {
           contributionCalendar {
-            weeks { contributionDays { contributionCount date } }
+            totalContributions
+            weeks { contributionDays { contributionCount date weekday } }
           }
         }
       }
@@ -61,45 +71,84 @@ def main() -> None:
     with urllib.request.urlopen(req, timeout=30) as resp:
         data = json.loads(resp.read())
 
-    weeks = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]["weeks"]
+    cal = data["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+    weeks = cal["weeks"]
+    total = cal.get("totalContributions", 0)
 
     size = 11
     gap = 3
     step = size + gap
-    left = 32
-    top = 18
+    left = 30
+    top = 20
     cols = len(weeks)
     rows = 7
-    width = left + cols * step
-    height = top + rows * step
+    legend_h = 22
+    width = left + cols * step + 4
+    height = top + rows * step + legend_h
 
     months = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
-    svg = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" '
-           f'height="{height}" viewBox="0 0 {width} {height}">']
+    svg = []
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" '
+               f'height="{height}" viewBox="0 0 {width} {height}" '
+               f'role="img" aria-label="Contribution heatmap">')
+    svg.append("<style>")
+    svg.append("@keyframes hm-pop{from{opacity:0;transform:scale(.2)}"
+               "to{opacity:1;transform:scale(1)}}")
+    svg.append(".hm-c{transform-box:fill-box;transform-origin:center;"
+               "animation:hm-pop .45s cubic-bezier(.34,1.56,.64,1) backwards}")
+    svg.append("</style>")
 
+    # weekday axis (Mon / Wed / Fri)
     for ri, lab in enumerate(["", "Mon", "", "Wed", "", "Fri", ""]):
         if lab:
             svg.append(f'<text x="0" y="{top + ri * step + size - 2}" '
-                       f'font-size="10" font-family="sans-serif" fill="#57606a">{lab}</text>')
+                       f'font-size="10" font-family="-apple-system,Segoe UI,sans-serif" '
+                       f'fill="#57606a">{lab}</text>')
 
+    # month axis
     prev_month = None
     for ci, week in enumerate(weeks):
         first = week["contributionDays"][0]["date"]
         m = int(first[5:7])
         if m != prev_month:
-            svg.append(f'<text x="{left + ci * step}" y="{top - 6}" '
-                       f'font-size="10" font-family="sans-serif" fill="#57606a">{months[m]}</text>')
+            svg.append(f'<text x="{left + ci * step}" y="{top - 7}" '
+                       f'font-size="10" font-family="-apple-system,Segoe UI,sans-serif" '
+                       f'fill="#57606a">{months[m]}</text>')
             prev_month = m
 
+    # total line (top-right)
+    svg.append(f'<text x="{width}" y="{top - 7}" text-anchor="end" '
+               f'font-size="10" font-family="-apple-system,Segoe UI,sans-serif" '
+               f'fill="#57606a">{total} contributions in the last year</text>')
+
+    # cells
     for ci, week in enumerate(weeks):
         for ri, day in enumerate(week["contributionDays"]):
             count = day["contributionCount"]
+            date = day["date"]
             x = left + ci * step
             y = top + ri * step
-            svg.append(f'<rect x="{x}" y="{y}" width="{size}" height="{size}" '
-                       f'rx="2" ry="2" fill="{color(count)}"/>')
+            delay = f"{ci * 0.03:.2f}s"
+            title = (f"{(count)} contribution{'s' if count != 1 else ''} on {date}"
+                     if count else f"No contributions on {date}")
+            svg.append(f'<rect class="hm-c" style="animation-delay:{delay}" '
+                       f'x="{x}" y="{y}" width="{size}" height="{size}" rx="2.5" ry="2.5" '
+                       f'fill="{color(count)}"><title>{title}</title></rect>')
+
+    # legend
+    ly = top + rows * step + 12
+    lx = width - 5 * step - 70
+    svg.append(f'<text x="{lx - 6}" y="{ly + size - 1}" text-anchor="end" '
+               f'font-size="10" font-family="-apple-system,Segoe UI,sans-serif" '
+               f'fill="#57606a">Less</text>')
+    for i, c in enumerate(["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]):
+        svg.append(f'<rect x="{lx + i * step}" y="{ly}" width="{size}" height="{size}" '
+                   f'rx="2.5" ry="2.5" fill="{c}"/>')
+    svg.append(f'<text x="{lx + 5 * step + 4}" y="{ly + size - 1}" '
+               f'font-size="10" font-family="-apple-system,Segoe UI,sans-serif" '
+               f'fill="#57606a">More</text>')
 
     svg.append("</svg>")
 
@@ -107,7 +156,7 @@ def main() -> None:
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         f.write("\n".join(svg))
-    print(f"generated heatmap -> {out_path} ({cols} weeks)")
+    print(f"generated heatmap -> {out_path} ({cols} weeks, total={total})")
 
 
 if __name__ == "__main__":
