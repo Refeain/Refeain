@@ -1,19 +1,22 @@
 <div align="center">
 
-<h1>Hi 👋, I'm Refeain</h1>  
+<!-- 静态标题，零外部依赖，国内稳定显示 -->
+<h1>Hi 👋, I'm Refeain</h1>
 <h3>Full-stack Builder · Cloud · Web · Open Source</h3>
 
-![Refeain](https://avatars.githubusercontent.com/u/101313620?v=4)
+<!-- 头像：GitHub 自家 CDN -->
+<img src="https://avatars.githubusercontent.com/u/101313620?v=4" width="140" height="140" style="border-radius: 50%; margin: 20px 0;" alt="Refeain" />
 
-<p>  
-  <em>Turning ideas into reliable, serverless, and user-friendly products.</em>  
+<p>
+  <em>Turning ideas into reliable, serverless, and user-friendly products.</em>
 </p>
 
-<a href="https://github.com/Refeain">  
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white" alt="GitHub" />  
-</a>  
-<a href="https://cfbed.sanyue.de">  
-  <img src="https://img.shields.io/badge/Portfolio-F38020?style=for-the-badge\&logo=cloudflare\&logoColor=white" alt="Portfolio" />  
+<!-- 社交徽章：shields.io 国内稳定 -->
+<a href="https://github.com/Refeain">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+<a href="https://cfbed.sanyue.de">
+  <img src="https://img.shields.io/badge/Portfolio-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Portfolio" />
 </a>
 
 </div>
@@ -31,15 +34,15 @@
 
 ### 🛠️ Tech Stack
 
-<p align="center">  
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black" alt="JavaScript" />  
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white" alt="TypeScript" />  
-  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square\&logo=cloudflare\&logoColor=white" alt="Cloudflare" />  
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square\&logo=nodedotjs\&logoColor=white" alt="Node.js" />  
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square\&logo=react\&logoColor=black" alt="React" />  
-  <img src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square\&logo=vuedotjs\&logoColor=white" alt="Vue" />  
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square\&logo=tailwindcss\&logoColor=white" alt="Tailwind CSS" />  
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square\&logo=git\&logoColor=white" alt="Git" />  
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
+  <img src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue" />
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
 </p>
 
 ---
@@ -48,8 +51,15 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Refeain&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&icon_color=3B82F6&text_color=C9D1D9" height="165" alt="Refeain's GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Refeain&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3B82F6&text_color=C9D1D9" height="165" alt="Top Languages" />
+<a href="https://github.com/Refeain">
+  <img src="https://img.shields.io/github/stars/Refeain?style=for-the-badge&logo=github&logoColor=white&color=3B82F6&labelColor=1F2937" alt="GitHub Stars" />
+</a>
+<a href="https://github.com/Refeain?tab=followers">
+  <img src="https://img.shields.io/github/followers/Refeain?style=for-the-badge&logo=github&logoColor=white&color=3B82F6&labelColor=1F2937" alt="GitHub Followers" />
+</a>
+<a href="https://github.com/Refeain?tab=repositories">
+  <img src="https://img.shields.io/badge/Dev%20Since-2024-3B82F6?style=for-the-badge&logo=calendar&logoColor=white&labelColor=1F2937" alt="Dev Since" />
+</a>
 
 </div>
 
@@ -59,26 +69,26 @@
 
 <div align="center">
 
-<a href="https://github.com/Refeain/CloudFlare-ImgBed">  
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Refeain\&repo=CloudFlare-ImgBed\&theme=tokyonight\&hide_border=true\&bg_color=0D1117\&title_color=3B82F6\&icon_color=3B82F6\&text_color=C9D1D9" alt="CloudFlare-ImgBed" />  
+**🏖️ [CloudFlare-ImgBed](https://github.com/Refeain/CloudFlare-ImgBed)**
+
+*A serverless, open-source file hosting solution built on Cloudflare.*
+
+<br/>
+
+<a href="https://github.com/Refeain/CloudFlare-ImgBed">
+  <img src="https://img.shields.io/github/stars/Refeain/CloudFlare-ImgBed?style=for-the-badge&logo=cloudflare&logoColor=white&color=F38020&labelColor=1F2937" alt="Stars" />
+</a>
+<a href="https://github.com/Refeain/CloudFlare-ImgBed/fork">
+  <img src="https://img.shields.io/github/forks/Refeain/CloudFlare-ImgBed?style=for-the-badge&logo=git&logoColor=white&color=F38020&labelColor=1F2937" alt="Forks" />
+</a>
+<a href="https://github.com/Refeain/CloudFlare-ImgBed/commits">
+  <img src="https://img.shields.io/github/last-commit/Refeain/CloudFlare-ImgBed?style=for-the-badge&logo=clockify&logoColor=white&color=F38020&labelColor=1F2937" alt="Last Commit" />
 </a>
 
-<p>🏖️ A serverless, open-source file hosting solution built on Cloudflare.</p>
-
 </div>
 
 ---
-
-### 📈 Visitor Count
 
 <div align="center">
-
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=Refeain)
-
-</div>
-
----
-
-<div align="center">  
-  <em>Thanks for stopping by! ⭐ Feel free to explore my repos.</em>  
+  <em>Thanks for stopping by! ⭐ Feel free to explore my repos.</em>
 </div>
