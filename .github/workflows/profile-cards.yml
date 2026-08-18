@@ -21,11 +21,11 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Generate heatmap + stat cards
+      - name: Generate trend chart + stat cards
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python scripts/generate_heatmap.py
+          python scripts/generate_chart.py
           python scripts/generate_stats.py
 
       - name: Commit and push

@@ -60,11 +60,11 @@
 
 ---
 
-### 🔥 Contribution Heatmap
+### 📈 Contribution Trend
 
 <div align="center">
 
-![Contribution Heatmap](https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/contribution-heatmap.svg)
+![Contribution Trend](https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/contribution-chart.svg)
 
 </div>
 
