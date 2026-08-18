@@ -4,11 +4,11 @@
 <text x="46" y="34" font-size="15" font-weight="700" font-family="-apple-system,Segoe UI,sans-serif" fill="#58A6FF">Refeain's GitHub Stats</text>
 <text x="20" y="70" font-size="15">📅</text>
 <text x="46" y="70" font-size="14" font-family="-apple-system,Segoe UI,sans-serif" fill="#C9D1D9">Contributions (last year)</text>
-<text x="440" y="70" font-size="14" text-anchor="end" font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" fill="#BC8CFF">14</text>
+<text x="440" y="70" font-size="14" text-anchor="end" font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" fill="#BC8CFF">15</text>
 <line x1="46" y1="78" x2="440" y2="78" stroke="#21262D" stroke-width="3" stroke-linecap="round"/>
 <text x="20" y="97" font-size="15">💻</text>
 <text x="46" y="97" font-size="14" font-family="-apple-system,Segoe UI,sans-serif" fill="#C9D1D9">Commits (last year)</text>
-<text x="440" y="97" font-size="14" text-anchor="end" font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" fill="#BC8CFF">10</text>
+<text x="440" y="97" font-size="14" text-anchor="end" font-family="-apple-system,Segoe UI,sans-serif" font-weight="700" fill="#BC8CFF">11</text>
 <line x1="46" y1="105" x2="440" y2="105" stroke="#21262D" stroke-width="3" stroke-linecap="round"/>
 <text x="20" y="124" font-size="15">🔀</text>
 <text x="46" y="124" font-size="14" font-family="-apple-system,Segoe UI,sans-serif" fill="#C9D1D9">Total Pull Requests</text>
