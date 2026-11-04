@@ -28,7 +28,12 @@ jobs:
 
       - name: Generate profile cards
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # The default GITHUB_TOKEN is scoped to this one repository, so the
+          # GraphQL query only sees this repo: languages collapse to the files
+          # here and private-repo contributions are dropped. PROFILE_TOKEN is a
+          # PAT with profile-wide read access, which is what the numbers on a
+          # profile are supposed to reflect.
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN }}
         run: python scripts/generate_cards.py
 
       - name: Commit and push
