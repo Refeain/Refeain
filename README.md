@@ -1,99 +1,58 @@
 <div align="center">
 
-<!-- 静态标题，零外部依赖，国内稳定显示 -->
-<h1>Hi 👋, I'm Refeain</h1>
-<h3>Full-stack Builder · Cloud · Web · Open Source</h3>
+<img src="https://avatars.githubusercontent.com/u/101313620?v=4" width="120" height="120" alt="Refeain" style="border-radius:50%" />
 
-<!-- 头像：GitHub 自家 CDN -->
-<img src="https://avatars.githubusercontent.com/u/101313620?v=4" width="140" height="140" style="border-radius: 50%; margin: 20px 0;" alt="Refeain" />
+# Refeain
 
-<p>
-  <em>Turning ideas into reliable, serverless, and user-friendly products.</em>
-</p>
+**自建服务 · 全栈 · 把想法跑起来**
 
-<!-- 社交徽章：shields.io 国内稳定 -->
-<a href="https://github.com/Refeain">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-</a>
-<a href="https://cfbed.sanyue.de">
-  <img src="https://img.shields.io/badge/Portfolio-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Portfolio" />
-</a>
+<a href="https://github.com/Refeain"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="https://cfbed.sanyue.de"><img src="https://img.shields.io/badge/CloudFlare--ImgBed-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="CloudFlare-ImgBed" /></a>
 
 </div>
 
 ---
 
-### 🧑‍💻 About Me
+### 关于
 
-- 🔭 Currently maintaining **[CloudFlare-ImgBed](https://github.com/Refeain/CloudFlare-ImgBed)** — a serverless file-hosting solution on Cloudflare.
-- ☁️ Passionate about **serverless architecture**, **web development**, and **developer tools**.
-- 🌱 Always learning and exploring new ways to build fast, scalable products.
-- 🤝 Open to collaborating on interesting open-source projects.
+自托管、无服务器、能省一行是一行。喜欢把一台机器压到刚好够用，
+然后把省下来的复杂度还给生活。
 
----
-
-### 🛠️ Tech Stack
-
-<p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue" />
-  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
-</p>
+- 长期维护 [**CloudFlare-ImgBed**](https://github.com/Refeain/CloudFlare-ImgBed) —— 跑在 Cloudflare 上的图床
+- 写 TypeScript 比写文档顺手，但文档最后还是得写
+- 近期在做 **DeepSeek Harness** 的周边工具
 
 ---
 
-### 📊 GitHub Stats
+### 最近在写
 
 <div align="center">
-
-<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/stats-card.svg" height="200" alt="GitHub Stats" />
-<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/langs-card.svg" height="200" alt="Top Languages" />
-
-<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/streak-card.svg" height="200" alt="GitHub Streak" />
-
+<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/repos-card.svg" alt="Recent repositories" />
 </div>
 
----
-
-### 📈 Contribution Trend
+### 语言分布
 
 <div align="center">
-
-![Contribution Trend](https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/contribution-chart.svg)
-
+<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/langs-card.svg" alt="Language mix" />
 </div>
 
----
-
-### 🚀 Featured Project
+### 贡献活动
 
 <div align="center">
+<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/stats-card.svg" alt="Contribution stats" />
+</div>
 
-**🏖️ [CloudFlare-ImgBed](https://github.com/Refeain/CloudFlare-ImgBed)**
-
-*A serverless, open-source file hosting solution built on Cloudflare.*
-
-<br/>
-
-<a href="https://github.com/Refeain/CloudFlare-ImgBed">
-  <img src="https://img.shields.io/github/stars/Refeain/CloudFlare-ImgBed?style=for-the-badge&logo=cloudflare&logoColor=white&color=F38020&labelColor=1F2937" alt="Stars" />
-</a>
-<a href="https://github.com/Refeain/CloudFlare-ImgBed/fork">
-  <img src="https://img.shields.io/github/forks/Refeain/CloudFlare-ImgBed?style=for-the-badge&logo=git&logoColor=white&color=F38020&labelColor=1F2937" alt="Forks" />
-</a>
-<a href="https://github.com/Refeain/CloudFlare-ImgBed/commits">
-  <img src="https://img.shields.io/github/last-commit/Refeain/CloudFlare-ImgBed?style=for-the-badge&logo=clockify&logoColor=white&color=F38020&labelColor=1F2937" alt="Last Commit" />
-</a>
-
+<div align="center">
+<img src="https://cdn.jsdelivr.net/gh/Refeain/Refeain@main/assets/contribution-chart.svg" alt="Contribution calendar" />
 </div>
 
 ---
 
 <div align="center">
-  <em>Thanks for stopping by! ⭐ Feel free to explore my repos.</em>
+
+<a href="https://github.com/Refeain?tab=repositories"><img src="https://img.shields.io/badge/全部仓库-查看-58A6FF?style=flat-square" alt="repos" /></a>
+<img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Fusers%2FRefeain&query=%24.public_repos&label=公开仓库&color=3FB950&style=flat-square" alt="public repos" />
+
+<sub>卡片每天 03:23 UTC 自动重建 · 由 <a href="https://github.com/Refeain/Refeain/blob/main/scripts/generate_cards.py">generate_cards.py</a> 生成</sub>
+
 </div>

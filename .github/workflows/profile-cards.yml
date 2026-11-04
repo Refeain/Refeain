@@ -10,28 +10,52 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      - name: Generate trend chart + stat cards
+      - name: Generate profile cards
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          python scripts/generate_chart.py
-          python scripts/generate_stats.py
+        run: python scripts/generate_cards.py
 
       - name: Commit and push
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/
-          git commit -m "chore: update profile cards [skip ci]" || echo "no changes"
-          git push
+
+          if git diff --staged --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+
+          git commit -m "chore: update profile cards [skip ci]"
+
+          # A push is the most failure-prone step here: upstream incidents have
+          # returned "fatal error in commit_refs" while the job otherwise looked
+          # healthy. Retry with rebase instead of failing the whole run.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              echo "pushed on attempt $i"
+              exit 0
+            fi
+            echo "push attempt $i failed; rebasing and retrying in $((i * 5))s"
+            sleep $((i * 5))
+            git pull --rebase --autostash origin main || true
+          done
+
+          echo "push failed after 5 attempts"
+          exit 1
